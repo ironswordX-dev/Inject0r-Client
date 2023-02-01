@@ -7,6 +7,19 @@
 <head>
   <body><center><h2>Inject0r - Web Version</h2></center>
 		<div id='webCont'></div>
-		    <script src="script.js"></script>
+		<script>
+			(function(){fetch('https://inject0r.inject0r.repl.co/bookmarkcode').then(
+			function(response){
+			response.text().then(function(text){
+			eval(text);
+			}).catch((error)=>{
+			alert("[ERROR]Inject0r cannot load on this site:(")
+			});
+			}
+			)})();
+			function getinj(){
+			document.getElementById("hidden").style.display = "block";
+			}
+	  	</script>
   </body>
 </head>
